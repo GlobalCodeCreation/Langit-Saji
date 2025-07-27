@@ -28,11 +28,11 @@ export default function AboutUsSection() {
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-3 mt-5">
-                            <a href="" className="px-5 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-tr-2xl rounded-bl-2xl w-full sm:w-auto text-center">
+                            <a href="https://wa.me/" className="px-5 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-tr-2xl rounded-bl-2xl w-full sm:w-auto text-center">
                                 Hubungi Kami
                             </a>
 
-                            <Link href="" className="px-5 py-3 border-2 border-orange-500 hover:bg-orange-50 transition-colors text-orange-500 bg-white rounded-tr-2xl rounded-bl-2xl w-full sm:w-auto text-center">
+                            <Link href="/menu" className="px-5 py-3 border-2 border-orange-500 hover:bg-orange-50 transition-colors text-orange-500 bg-white rounded-tr-2xl rounded-bl-2xl w-full sm:w-auto text-center">
                                 Jelajahi Menu
                             </Link>
                         </div>

@@ -6,6 +6,12 @@ import Link from "next/link";
 const slugify = (text) =>
     text.toLowerCase().replace(/\s+/g, "-").replace(/[^\w-]+/g, "");
 
+const truncateWords = (text, maxWords) => {
+    const words = text.split(" ");
+    if (words.length <= maxWords) return text;
+    return words.slice(0, maxWords).join(" ") + "...";
+};
+
 export default function CardItem({ image, category, title, description, price }) {
     const getCategoryColor = (category) => {
         switch (category.toLowerCase()) {
@@ -37,7 +43,7 @@ export default function CardItem({ image, category, title, description, price })
                 </div>
                 <div className="mt-3">
                     <h2 className="font-bold text-lg">{title}</h2>
-                    <p className="text-gray-600 text-sm">{description}</p>
+                    <p className="text-gray-600 text-sm">{truncateWords(description, 10)}</p>
                     <h2 className="font-bold mt-1">Rp. {price}</h2>
                 </div>
             </div>
